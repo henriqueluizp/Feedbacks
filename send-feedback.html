@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <title>Enviar Feedback - Sistema de Feedbacks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/send-feedback.css">
+    <link rel="stylesheet" href="styles/notifications.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Feedbacks</h2>
+            <ul class="nav-menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="feedbacks.html">Acompanhamento</a></li>
+                <li><a href="send-feedback.html">Enviar Feedback</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="menu-wrapper">
+                <div class="menu-toggle">☰</div>
+                <h1>Enviar Feedback</h1>
+            </div>
+
+            <div class="card">
+                <form id="feedback-form" class="feedback-form">
+                    <div class="form-group">
+                        <label for="receiver">Destinatário</label>
+                        <select id="receiver" class="select-receiver" required>
+                            <option value="">Selecione um destinatário</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="type">Tipo de Feedback</label>
+                        <select id="type" class="select-type" required>
+                            <option value="">Selecione o tipo</option>
+                            <option value="elogio">Elogio</option>
+                            <option value="sugestao">Sugestão</option>
+                            <option value="critica">Crítica</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" class="textarea-message" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group form-group-submit">
+                        <button type="submit" class="btn btn-primary">
+                            <div class="loading-spinner"></div>
+                            <span>Enviar Feedback</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/send-feedback.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+
+</html>

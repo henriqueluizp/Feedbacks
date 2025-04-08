@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">   
+
+
+    <title>Dashboard - Sistema de Feedbacks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="styles/notifications.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Feedbacks</h2>
+            <ul class="nav-menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="feedbacks.html">Acompanhamento</a></li>
+                <li><a href="send-feedback.html">Enviar Feedback</a></li>
+            </ul>
+        </aside>
+        <main class="main-content dashboard">
+            <div class="menu-wrapper">
+                <div class="menu-toggle">☰</div>
+                <h1>Dashboard</h1>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <h3>Feedbacks</h3>
+                    <div class="metrics">
+                        <p>Enviados: <span id="sent-feedbacks">0</span></p>
+                        <p>Recebidos: <span id="received-feedbacks">0</span></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Nível de Satisfação</h3>
+                    <canvas id="satisfaction-chart"></canvas>
+                </div>
+
+                <div class="card">
+                    <h3>Áreas com mais Feedback</h3>
+                    <canvas id="areas-chart"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+.filters {
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.filters>.form-group {
+    width: 100%;
+}
+
+.filter-actions {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.filter-actions .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.filter-actions .btn:hover {
+    opacity: 0.8;
+}
+
+.feedback-card {
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.feedback-card:hover {
+    background-color: var(--secondary-color);
+}
+
+.feedback-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.status.enviado {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.status.respondido {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status.arquivado {
+    background-color: #c3c3c3;
+    color: white;
+}
+
+.status.pendente {
+    background-color: #fff3e0;
+    color: #f57c00;
+}
+
+.no-feedbacks {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .filters {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    .filters {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 22rem;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-content .action-buttons {
+    flex-direction: row;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.modal-close:hover {
+    opacity: 0.7;
+}
+
+.feedback-actions {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.feedback-actions h4 {
+    margin-bottom: 15px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.action-buttons .btn-respond {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.action-buttons .btn-archive {
+    background-color: #f0f0f0;
+    color: var(--text-color);
+}
+
+.action-buttons button:hover {
+    opacity: 0.8;
+}
+
+.response-form {
+    display: none;
+    margin-top: 20px;
+}
+
+.response-form.active {
+    display: block;
+}
+
+.response-form textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    resize: vertical;
+}
+
+@media (min-width: 768px) {
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+}
+
+.feedback-response {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+}
+
+.feedback-response h4 {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.feedback-response p {
+    color: var(--text-color);
+    line-height: 1.5;
+}

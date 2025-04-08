@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <title>Acompanhamento - Sistema de Feedbacks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/feedbacks.css">
+    <link rel="stylesheet" href="styles/notifications.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Feedbacks</h2>
+            <ul class="nav-menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="feedbacks.html">Acompanhamento</a></li>
+                <li><a href="send-feedback.html">Enviar Feedback</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="menu-wrapper">
+                <div class="menu-toggle">☰</div>
+                <h1>Acompanhamento de Feedbacks</h1>
+            </div>
+
+            <div class="card">
+                <div class="filters">
+                    <div class="form-group">
+                        <label for="date-filter">Data</label>
+                        <input type="date" id="date-filter" class="date-filter">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="type-filter">Tipo</label>
+                        <select id="type-filter" class="type-filter">
+                            <option value="">Todos</option>
+                            <option value="elogio">Elogio</option>
+                            <option value="sugestão">Sugestão</option>
+                            <option value="crítica">Crítica</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status-filter">Status</label>
+                        <select id="status-filter" class="status-filter">
+                            <option value="">Todos</option>
+                            <option value="enviado">Enviado</option>
+                            <option value="respondido">Respondido</option>
+                            <option value="pendente">Pendente</option>
+                            <option value="arquivado">Arquivado</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-actions">
+                        <button class="btn clear-filters">Limpar Filtros</button>
+                    </div>
+                </div>
+
+                <div id="feedbacks-list" class="feedbacks-list">
+                </div>
+            </div>
+
+            
+            <div id="feedback-modal" class="feedback-modal modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Detalhes do Feedback</h2>
+                        <button class="modal-close">&times;</button>
+                    </div>
+                    <div id="modal-feedback-content">
+                       
+                    </div>
+                    <div class="feedback-actions">
+                        <h4>Ações</h4>
+                        <div class="action-buttons">
+                            <button class="btn-respond">Responder</button>
+                            <button class="btn-archive">Arquivar</button>
+                        </div>
+                        <div class="response-form">
+                            <textarea placeholder="Digite sua resposta..."></textarea>
+                            <div class="action-buttons">
+                                <button class="btn-respond">Enviar Resposta</button>
+                                <button class="btn-archive">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/feedbacks.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+
+</html>

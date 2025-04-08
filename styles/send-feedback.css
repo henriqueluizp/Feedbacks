@@ -1,0 +1,24 @@
+.form-group-submit {
+  display: flex;
+  justify-content: end;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: none;
+    cursor: default;
+}
+
+.form-group select {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1em;
+    padding-right: 30px;
+}
+
+@media (max-width: 768px) {
+    .feedback-form {
+        padding: 0 15px;
+    }
+} 
