@@ -97,7 +97,7 @@ class NotificationsManager {
     setupEventListeners() {
         if (!this.dropdownElement) return;
 
-        // Toggle do menu
+        // Toggle da notificação
         this.bellButton.addEventListener('click', (e) => {
             e.stopPropagation();
             this.toggleMenu();
@@ -129,7 +129,7 @@ class NotificationsManager {
             }
         });
 
-        // Marcar todas como lidas
+        // Marcar todas como lidas - Simulando success ou error da api
         this.dropdownElement.querySelector('.mark-all-read').addEventListener('click', async () => {
             try {
                 await api.markAllNotificationsAsRead();
